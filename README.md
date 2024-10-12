@@ -100,6 +100,17 @@ If the installation build succeeded, you should be able to launch the applicatio
 OpenRiichi requires the `Data` folder (found inside the `bin` folder) to be in the one of the search directories. OpenRiichi will add the `OpenRiichi` subdirectory of the default data directory of the OS (usually `/usr/share/OpenRiichi`) to the search path, along with the the current working directory and the executable directory.
 An additional search path can be added during runtime by running OpenRiichi with the `--search-directory some_custom_directory` flag.
 
+### Using Nix (flakes enabled)
+
+This repository includes a `flake.nix` hence you can automatically build and run it with
+
+```bash
+git clone https://github.com/FluffyStuff/OpenRiichi.git
+cd OpenRiichi
+nix flake update # optional: if you want to update `flake.lock`
+nix run .
+```
+
 ## IDE
 
 The preferred editor to use is [Visual Studio Code](https://code.visualstudio.com).
