@@ -100,7 +100,7 @@ If the installation build succeeded, you should be able to launch the applicatio
 OpenRiichi requires the `Data` folder (found inside the `bin` folder) to be in the one of the search directories. OpenRiichi will add the `OpenRiichi` subdirectory of the default data directory of the OS (usually `/usr/share/OpenRiichi`) to the search path, along with the the current working directory and the executable directory.
 An additional search path can be added during runtime by running OpenRiichi with the `--search-directory some_custom_directory` flag.
 
-### Using Nix (flakes enabled)
+### Using Nix (flakes enabled) on Linux x86
 
 This repository includes a `flake.nix` hence you can automatically build and run it with
 
