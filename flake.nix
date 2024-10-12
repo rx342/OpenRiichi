@@ -11,6 +11,7 @@
 
   outputs =
     {
+      self,
       nixpkgs,
       open-riichi,
       ...
@@ -48,10 +49,15 @@
       };
     in
     {
+      packages.${system} = rec {
+        OpenRiichi = open-richii-drv;
+        default = OpenRiichi;
+      };
+
       apps.${system} = rec {
         OpenRiichi = {
           type = "app";
-          program = "${open-richii-drv}/bin/OpenRiichi";
+          program = "${self.packages.${system}.OpenRiichi}/bin/OpenRiichi";
         };
         default = OpenRiichi;
       };
