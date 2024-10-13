@@ -34,7 +34,6 @@
           SDL2_image
           SDL2_mixer
           ninja
-          git
         ];
         buildPhase = ''
           mkdir -p $out
